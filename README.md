@@ -1,0 +1,2 @@
+# Primetrade.ai
+Backend Assignment
