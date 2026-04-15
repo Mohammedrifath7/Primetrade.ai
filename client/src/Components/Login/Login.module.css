@@ -1,0 +1,135 @@
+.auth-bg {
+  height: 100vh;                 
+  background: linear-gradient(135deg, #e6f1fb, #f4f9ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;             
+}
+
+
+
+
+.auth-card {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: #1e73be;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.logo h1 span {
+  color: #1e73be;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 25px 0;
+}
+
+.login-email{
+  width: 90%;
+  padding-left: 12px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-row{
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.auth-row input{
+  margin-top: 15px;
+}
+
+
+
+.auth-row label {
+  display: flex;
+  align-items: center;   /* ⭐ checkbox + text aligned */
+  gap: 8px;
+  cursor: pointer;
+}
+
+.auth-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.auth-row a {
+  color: #1e73be;
+  text-decoration: none;
+}
+
+.auth-card button {
+  width: 100%;
+  background: #1e73be;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: #155d9c;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #1e73be;
+  text-decoration: none;
+  font-weight: 600;
+}
