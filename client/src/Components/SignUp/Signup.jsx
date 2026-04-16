@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import styles from "./Signup.module.css"
+import { Link, useNavigate } from "react-router-dom";
+import styles from "./Signup.module.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     userName: "",
@@ -17,16 +19,17 @@ const Signup = () => {
     });
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    // 🔴 Password check
     if (formData.password !== formData.confirmPassword) {
-          alert("Passwords do not match");
-        return;
+      alert("Passwords do not match");
+      return;
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/signUp", {
+      const res = await fetch("http://localhost:5000/api/signUp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,20 +37,23 @@ const Signup = () => {
         body: JSON.stringify({
           email: formData.email,
           userName: formData.userName,
-          password: formData.password
-        })
-    });
+          password: formData.password,
+        }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (res.ok) {
-      alert("User registered successfully");
-    } else {
-      alert(data.message);
+      if (res.ok) {
+        alert("User registered successfully");
+
+        // 🔥 redirect to login
+        navigate("/login");
+      } else {
+        alert(data.message);
+      }
+    } catch (err) {
+      console.error(err);
     }
-  } catch (err) {
-    console.error(err);
-  }
   };
 
   return (
@@ -59,7 +65,7 @@ const Signup = () => {
           <div className={styles["logo-icon"]}>P</div>
           <div>
             <h1>PrimeTrade<span>AI</span></h1>
-            <p>Products</p>
+            <p>Movies</p>
           </div>
         </div>
 

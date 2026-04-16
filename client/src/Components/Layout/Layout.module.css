@@ -1,0 +1,52 @@
+/* 🌑 Main container */
+.container {
+  background-color: #14181c;
+  min-height: 100vh;
+  color: #d8e0e8;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 📦 Content below navbar */
+.content {
+  padding: 20px 30px;
+}
+
+/* 🔥 Navbar */
+.navbar {
+  height: 60px;
+  background-color: #1c2228;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #2c3440;
+}
+
+/* 🎬 Logo */
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* 🔗 Links container */
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+/* 🔘 Buttons */
+.links button {
+  background: transparent;
+  border: none;
+  color: #9ab;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover */
+.links button:hover {
+  color: #46d369;
+}

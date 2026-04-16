@@ -1,0 +1,123 @@
+/* 🌑 Main Container */
+.container {
+  min-height: 100vh;
+  background-color: #14181c;
+  color: #d8e0e8;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🔥 Title */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+/* 📦 Section */
+.section {
+  margin-bottom: 40px;
+}
+
+/* 🧾 Section Title */
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #9ab;
+  letter-spacing: 0.5px;
+}
+
+/* 🎬 Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* 🎥 Card */
+.card {
+  background-color: #1c2228;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid #2c3440;
+}
+
+/* ✨ Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.6);
+  border-color: #3f8efc;
+}
+
+/* 🖼 Poster */
+.poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* 🎞 Movie Title */
+.movieTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+/* ⭐ Rating */
+.rating {
+  font-size: 14px;
+  color: #46d369;
+  margin-bottom: 4px;
+}
+
+/* 📝 Review */
+.review {
+  font-size: 13px;
+  color: #9ab;
+}
+
+/* 👤 User Info */
+.userInfo {
+  font-size: 13px;
+  color: #8f9da8;
+  margin-top: 6px;
+}
+
+/* 👥 User Card */
+.userCard {
+  background-color: #1c2228;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #2c3440;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.userCard:hover {
+  border-color: #46d369;
+}
+
+/* 📧 Email */
+.email {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* 🛡 Role */
+.role {
+  font-size: 12px;
+  color: #46d369;
+  margin-top: 3px;
+}
+
+/* 🚫 Empty text */
+.empty {
+  color: #6c7a89;
+  font-style: italic;
+}

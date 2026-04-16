@@ -23,32 +23,37 @@ const Login = () => {
     e.preventDefault();
 
     try{
-      const res = await fetch("http://localhost:3000/api/signin", {
+      const res = await fetch("http://localhost:5000/api/signin", {
         method : "POST",
         headers : {
           "Content-Type" : "application/json"
         },
         body : JSON.stringify({
           email : formData.email,
-          password : formData.password
-        })
+          password : formData.password,
+        }),
       });
 
       const data = await res.json();
 
       if(res.ok){
         localStorage.setItem("token" , data.token);
-        localStorage.setItem("role", data.role);
+        localStorage.setItem("role", data.user.role);
 
         alert("Login successful");
-        //navigate("products")
+        if (data.user.role === "admin") {
+             navigate("/admin");
+        } else {
+          navigate("/dashboard");
+        }
       } else{
         alert(data.message)
       }
 
       
     } catch(err){
-
+        console.error(err); // ✅ FIX 4
+        alert("Something went wrong");
     }
 
 
@@ -64,7 +69,7 @@ const Login = () => {
           <div className={styles["logo-icon"]}>P</div>
           <div>
             <h1>PrimeTrade<span>AI</span></h1>
-            <p>Products</p>
+            <p>Movies</p>
           </div>
         </div>
 
